@@ -39,6 +39,3 @@ class BilleteraElectronica:
 
     def saldo(self):
         return self.balance
-
-if __name__ == '__main__':
-    pass
