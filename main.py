@@ -9,7 +9,7 @@ from datetime import *
 class Registro:
     def __init__(self, monto, fecha, localID):
         self.monto = monto
-        self.fecha = strftime(fecha,'%d/%m/%Y %H:%M')
+        self.fecha = datetime.strftime(fecha,'%d/%m/%Y %H:%M')
         self.localID = localID
 
     def __str__(self):
