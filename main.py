@@ -9,11 +9,11 @@ from datetime import *
 class Registro:
     def __init__(self, monto, fecha, localID):
         self.monto = monto
-        self.fecha = fecha
+        self.fecha = strftime(fecha,'%d/%m/%Y %H:%M')
         self.localID = localID
 
     def __str__(self):
-        return "\nMonto: "+str(self.monto)+"\nFecha: "+str(self.fecha)+"\nEstablecimiento: "+str(self.localID)+"\n"
+        return "\nMonto: "+str(self.monto)+"\nFecha: "+self.fecha+"\nEstablecimiento: "+str(self.localID)+"\n"
 
 class BilleteraElectronica:
     def __init__(self, identificador, nombres, apellidos, CI, PIN, balance = 0):
