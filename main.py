@@ -27,11 +27,11 @@ class BilleteraElectronica:
         self.consumos = []
         self.balance = balance
 
-    def recargar(self, monto, fecha = datetime.now(), localID):
+    def recargar(self, monto, localID,fecha = datetime.now()):
         self.recargas += [Registro(monto, fecha, localID)]
         self.balance += monto
 
-    def consumir(self, PIN, monto, fecha = datetime.now(), localID):
+    def consumir(self, PIN, monto, localID, fecha = datetime.now()):
         if self.PIN == PIN:
             if self.balance >= monto:
                 self.consumos += [Registro(monto, fecha, localID)]
