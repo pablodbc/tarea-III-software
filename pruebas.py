@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
     
     def testDebitoConBalanceExacto(self):
         billetera = BilleteraElectronica(0,"Pablo","Betancourt",1,1234,1)
-        billetera.consumir(1234,1,"Pablo")
+        billetera.consumir(1234,1,"Carlos")
 
     def testDebitoConBalanceMinimamenteMayor(self):
             billetera = BilleteraElectronica(0,"Pablo","Betancourt",1,1234,1.000001)
