@@ -31,7 +31,7 @@ class BilleteraElectronica:
     def consumir(self, PIN, monto, fecha, localID):
         if self.PIN == PIN:
             if self.balance >= monto:
-                self.recargas += [Registro(monto, fecha, localID)]
+                self.consumos += [Registro(monto, fecha, localID)]
                 self.balance -= monto
 
             else:
