@@ -30,6 +30,10 @@ class Test(unittest.TestCase):
             billetera = BilleteraElectronica(0,"Pablo","Betancourt",1,1234,1.000001)
             billetera.consumir(1234,1,"Pablo")
 
+    def testDebitoConBalanceMinimamenteMenor(self):
+        billetera = BilleteraElectronica(0,"Pablo","Betancourt",1,1234,0.99999999999)
+        billetera.consumir(1234,1,"Pablo")
+
 
 if __name__ == "__main__":
     unittest.main()
