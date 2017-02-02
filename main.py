@@ -33,16 +33,9 @@ class BilleteraElectronica:
         self.balance += monto
 
     def consumir(self, PIN, monto, localID, fecha = datetime.now()):
-        if self.PIN == PIN:
-            if self.balance >= monto:
-                self.consumos += [Registro(monto, fecha, localID)]
-                self.balance -= monto
-
-            else:
-                print("No hay suficiente crédito para llevar acabo la operación")
-
-        else:
-            print("El número de PIN no coincide con el registrado en la billetera")
+        assert(PIN == self.PIN and self.balance >= monto)
+        self.consumos += [Registro(monto, fecha, localID)]
+        self.balance -= monto
 
     def saldo(self):
         return self.balance
