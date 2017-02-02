@@ -19,6 +19,7 @@ class BilleteraElectronica:
         self.identificador = identificador
         self.nombres = nombres
         self.apellidos = apellidos
+        assert(CI >=0)
         self.CI = CI
         self.PIN = PIN
         self.recargas = []
