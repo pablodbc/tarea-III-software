@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 '''
 Created on 1 feb. 2017
 
@@ -15,7 +16,7 @@ class Registro:
 
 class BilleteraElectronica:
     def __init__(self, identificador, nombres, apellidos, CI, PIN, balance = 0):
-        self.identificador =identificador
+        self.identificador = identificador
         self.nombres = nombres
         self.apellidos = apellidos
         self.CI = CI
@@ -38,7 +39,7 @@ class BilleteraElectronica:
                 print("No hay suficiente crédito para llevar acabo la operación")
 
         else:
-            print("El número de PIN no coincide con el registradoen la billetera")
+            print("El número de PIN no coincide con el registrado en la billetera")
 
     def saldo(self):
         return self.balance
