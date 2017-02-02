@@ -28,6 +28,7 @@ class BilleteraElectronica:
         self.balance = balance
 
     def recargar(self, monto, localID,fecha = datetime.now()):
+        assert(monto > 0)
         self.recargas += [Registro(monto, fecha, localID)]
         self.balance += monto
 
